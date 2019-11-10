@@ -1,0 +1,19 @@
+.ul li
+  padding-left: 24px
+  position: relative
+  +norms(m)
+
+  &:not(:last-child)
+    margin-bottom: 1.1em
+
+  &::before
+    content: ''
+    position: absolute
+    top: 0.5em
+    left: 0
+
+    width: 8px
+    height: 8px
+
+    border-radius: 50%
+    background: $acc

@@ -1,0 +1,29 @@
+.how
+  overflow: hidden
+  display: block
+  padding-top: 88px
+  padding-bottom: 160px
+
+  @media (max-width: 1100px)
+    padding-top: 64px
+    padding-bottom: 64px
+
+.how-title
+  +norms(b)
+  +yo('font-size', (320px: 56px, 1300px: 108px, 1920px: 144px, 2550px: 192px))
+  letter-spacing: -0.02em
+  line-height: 1
+
+  -webkit-text-stroke: 1px rgba($acc, 0.5)
+  color: transparent
+
+  margin-bottom: 0.8em
+
+.how-list
+  width: 100%
+
+.how-list > li:not(:last-child)
+  margin-bottom: 16vh
+
+  @media (max-width: 1100px)
+    margin-bottom: 56px

@@ -6,7 +6,7 @@ const options = {
 // Create observer
 const observer = new IntersectionObserver(items => {
   items.forEach(item => {
-    if (item.isIntersecting && item.intersectionRatio >= 0.6) {
+    if (item.isIntersecting && item.intersectionRatio >= 0.2) {
       document.documentElement.style.setProperty(
         '--bg',
         item.target.dataset.bg
@@ -15,9 +15,15 @@ const observer = new IntersectionObserver(items => {
   });
 }, options);
 
-// Start observe
-const elements = document.querySelectorAll('[data-bg]');
+const init = () => {
+  if (window.innerWidth <= 500) return false;
 
-elements.forEach(el => {
-  observer.observe(el);
-});
+  // Start observe
+  const elements = document.querySelectorAll('[data-bg]');
+
+  elements.forEach(el => {
+    observer.observe(el);
+  });
+};
+
+document.addEventListener('DOMContentLoaded', init);

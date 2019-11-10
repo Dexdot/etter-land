@@ -3,4 +3,5 @@
 import '@/init/css-props';
 import '@/observer/animate';
 import '@/observer/bg';
+import '@/init/rail';
 // import '@/init/scroll';

@@ -1,0 +1,32 @@
+.join
+  display: block
+
+  padding-top: 80px
+  padding-bottom: 80px
+  @media (min-width: 1101px)
+    padding-top: 18vh
+    padding-bottom: 26vh
+    min-height: unset
+
+.join-btn
+  +heading-size-2
+  color: $black
+
+  display: inline-block
+  padding-bottom: 0.2em
+
+  position: relative
+  
+  @media (max-width: 410px)
+    font-size: 24px
+
+  &::before
+    content: ''
+    position: absolute
+    bottom: 0
+    left: 0
+
+    width: 100%
+    height: 1px
+
+    background: $acc
