@@ -1,0 +1,15 @@
+.fade
+  opacity: 0
+  transition: opacity .6s cubic-bezier(.645,.045,.355,1)
+
+.fade.visible
+  opacity: 1
+
+.fadeup
+  opacity: 0
+  transform: translateY(16px)
+  transition: opacity 1s cubic-bezier(.39,.575,.565,1), transform .6s cubic-bezier(.39,.575,.565,1)
+
+.fadeup.visible
+  opacity: 1
+  transform: translateY(0)

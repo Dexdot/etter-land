@@ -1,0 +1,22 @@
+.header
+  z-index: 3
+  position: absolute
+  top: 24px
+  left: 0
+  right: 0
+
+.header__logo
+  display: flex
+  align-items: center
+
+  span
+    margin-left: 12px
+
+    +norms(b)
+    color: $acc
+    +yo('font-size', (320px: 18px, 768px: 24px))
+    line-height: 1
+
+.header .btn
+  background: $acc-l
+  color: $acc

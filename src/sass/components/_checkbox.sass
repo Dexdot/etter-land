@@ -1,0 +1,38 @@
+.checkbox
+  position: relative
+  font-size: 12px
+  padding-left: 32px
+
+  &::before
+    content: ''
+    width: 20px
+    height: 20px
+
+    background: #fff
+    border-radius: 2px
+
+    position: absolute
+    top: 0
+    left: 0
+
+  input
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+
+    opacity: 0
+    cursor: pointer
+
+  input:not(:checked) ~ svg
+    opacity: 0
+
+  svg
+    position: absolute
+    top: 4px
+    left: 3px
+    transition: opacity 0.25 ease
+
+  a
+    +norms(m)

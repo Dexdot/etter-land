@@ -1,0 +1,43 @@
+{
+  "name": "etter",
+  "version": 2,
+  "alias": "etter.now.sh",
+  "github": {
+    "silent": true
+  },
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@now/static-build",
+      "config": {
+        "distDir": "dist"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "^/js/(.*)",
+      "dest": "/js/$1"
+    },
+    {
+      "src": "^/css/(.*)",
+      "dest": "/css/$1"
+    },
+    {
+      "src": "^/fonts/(.*)",
+      "dest": "/fonts/$1"
+    },
+    {
+      "src": "^/img/(.*)",
+      "dest": "/img/$1"
+    },
+    {
+      "src": "^/favicon/.*",
+      "dest": "/favicon/$1"
+    },
+    {
+      "src": ".*",
+      "dest": "/index.html"
+    }
+  ]
+}
