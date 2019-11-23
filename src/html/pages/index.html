@@ -1,4 +1,4 @@
-@include('../includes/pre-head.html')
+@include('../includes/pre-head.html') @include('../includes/header-main.html')
 
 <div class="bg"></div>
 
@@ -11,7 +11,9 @@
         Работайте где и когда вам удобно, управляйте сами уровнем своих доходов.
         Для этого достаточно знания английского или китайского языка
       </p>
-      <button class="btn">Присоединиться к Etter</button>
+      <a href="/auth.html" class="btn btn--acc">
+        Присоединиться к Etter
+      </a>
     </div>
 
     <div class="section__img">
@@ -64,7 +66,9 @@
         <li>Неограниченное число заказов в день</li>
         <li>Моментальный вывод денег из системы</li>
       </ul>
-      <button class="btn">Присоединиться к Etter</button>
+      <a href="/auth.html" class="btn btn--acc">
+        Присоединиться к Etter
+      </a>
     </div>
 
     <img src="img/mockup.jpg" class="section__bg js-observe fade" />
@@ -205,8 +209,12 @@
         <li>Получите ключи доступа в систему</li>
       </ol>
       <div class="cta__btns u-flex u-aic">
-        <button class="btn">Регистрация</button>
-        <button class="btn">Пример теста</button>
+        <a href="/auth.html" class="btn btn--acc">
+          Регистрация
+        </a>
+        <a href="/example.html" class="btn btn--stroke-grey">
+          Пример теста
+        </a>
       </div>
     </div>
   </section>
@@ -237,7 +245,7 @@
                 Я согласен на <a href="#">обработку персональных данных</a>
               </label>
 
-              <button class="btn" type="submit">Отправить</button>
+              <button class="btn btn--white" type="submit">Отправить</button>
             </div>
           </div>
         </form>
@@ -248,7 +256,9 @@
 
   <!-- Join Start -->
   <section class="section join container t-tac" data-bg="#FFFFFF">
-    <button class="join-btn">Присоединиться к Etter</button>
+    <a href="/auth.html" class="join-btn">
+      Присоединиться к Etter
+    </a>
   </section>
   <!-- Join End -->
 </main>

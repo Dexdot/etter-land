@@ -1,5 +1,3 @@
-$btn-h: 48px
-  
 .btn
   +norms(b)
   font-size: 13px
@@ -8,8 +6,9 @@ $btn-h: 48px
   line-height: 1
   white-space: nowrap
 
-  height: $btn-h
   padding: 0 40px
+  --btn-h: 48px
+  height: var(--btn-h)
 
   border-radius: 100px
   transition: opacity 0.25s ease
@@ -18,12 +17,53 @@ $btn-h: 48px
     opacity: 0.7
   
   @media (max-width: 500px)
+    --btn-h: 40px
     font-size: 10px
     padding: 0 24px
-    height: 40px
+
+
+a.btn--acc
+  +link(#fff)
+.btn--acc
+  color: #fff
+  background: $acc
+
+a.btn--acc-l
+  +link($acc)
+.btn--acc-l
+  color: $acc
+  background: $acc-l
+
+a.btn--white
+  +link($acc)
+.btn--white
+  color: $acc
+  background: #fff
+
+a.btn--black
+  +link(#fff)
+.btn--black
+  color: #fff
+  background: #000
+
+a.btn--stroke
+  +link($black)
+.btn--stroke
+  color: $black
+  background: 0
+  border: 1px solid $acc
+
+a.btn--stroke-grey
+  +link($black)
+.btn--stroke-grey
+  color: $black
+  background: 0
+  border: 1px solid rgba($black, 0.3)
+
 
 a.btn
-  display: flex
-  align-items: center
-  justify-content: center
+  display: inline-block
+  text-align: center
+  line-height: var(--btn-h)
+
 
