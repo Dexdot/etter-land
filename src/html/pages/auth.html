@@ -1,6 +1,78 @@
 @include('../includes/pre-head.html') @include('../includes/header-auth.html')
 
-<main></main>
+<main>
+  <section class="auth">
+    <div class="auth__half">
+      <div class="about-test">
+        <h2 class="t-h3">Пройдите тест, чтобы получить доступ к сервису</h2>
+        <p>
+          Вас ожидает небольшой тест, состоящий из двух частей, первая часть
+          теста нацелена на определение ваших знаний в грамматике, вторая часть
+          теста - задание на перевод двух коротких текстов. На выолнение теста
+          вам будет выделено 20 минут.
+        </p>
+        <ul class="about-test__list">
+          <li>
+            <b>10</b>
+            <p>Вопросов<br />по грамматике</p>
+          </li>
+          <li>
+            <b>2</b>
+            <p>Текста по 200<br />слов для перевода</p>
+          </li>
+          <li>
+            <b>20</b>
+            <p>Минут на<br />выполнение</p>
+          </li>
+        </ul>
+        <a href="/example.html" class="btn btn--stroke">Пример теста</a>
+        <button class="btn btn--acc js-gotoform">Приступить</button>
+      </div>
+    </div>
+
+    <div class="auth__half">
+      <form class="auth-form">
+        <h2 class="t-h4">Зарегистрируйтесь для прохождения</h2>
+        <input class="input" type="text" placeholder="Имя" required />
+        <input class="input" type="text" placeholder="Фамилия" required />
+        <input
+          class="input"
+          type="text"
+          placeholder="Почта"
+          required
+          pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
+        />
+
+        <small>Какой язык вы знаете?</small>
+
+        <div class="auth-form__lang u-center">
+          <label class="radio">
+            <input type="radio" name="lang" value="Английский" checked />
+            <span class="radio__border"></span>
+            <span>Английский</span>
+          </label>
+          <label class="radio">
+            <input type="radio" name="lang" value="Китайский" />
+            <span class="radio__border"></span>
+            <span>Китайский</span>
+          </label>
+        </div>
+
+        <div class="auth-form__submit-row u-flex u-aic u-jcsb">
+          <label class="checkbox">
+            <input type="checkbox" checked />
+            <svg class="i-checkbox">
+              <use xlink:href="#i-checkbox" />
+            </svg>
+            Я согласен на <a href="#">обработку персональных данных</a>
+          </label>
+
+          <button class="btn btn--acc" type="submit">Отправить</button>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
 
 <!-- footer -->
 @include('../includes/footer.html')

@@ -1,0 +1,113 @@
+.auth
+  display: flex
+  @media (max-width: 1000px)
+    flex-direction: column
+
+.auth__half
+  min-height: 100vh
+  width: 50%
+
+  @media (min-width: 1001px)
+    padding-top: 25vh
+
+  @media (min-width: 1001px) and (max-height: 770px)
+    padding-top: 16vh
+
+  @media (max-width: 1000px)
+    width: 100%
+    display: flex
+    flex-direction: column
+
+  @media (max-width: 500px)
+    min-height: calc(var(--initial-vh) * 100)
+
+.auth__half:first-child
+  background: $acc-l
+
+  padding-left: $unit
+  padding-right: $unit * 2
+
+  @media (max-width: 1920px)
+    padding-right: $unit
+
+  @media (max-width: 1000px)
+    padding-top: 22vh
+    padding-bottom: 40px
+
+  .about-test
+    @media (max-width: 1920px) and (min-width: 1001px)
+      max-width: 640px
+
+.auth__half:last-child
+  padding-left: $unit
+  padding-right: $unit
+
+  @media (max-width: 1000px)
+    padding-top: 18vh
+    padding-bottom: 56px
+
+    display: none
+
+.auth-form
+  max-width: 500px
+  margin: 0 auto
+
+  @media (max-width: 1000px)
+    display: flex
+    flex-direction: column
+    flex-grow: 1
+
+  h2
+    +norms(b)
+    line-height: 1
+    margin-bottom: 1.335em
+
+  small
+    font-size: 14px
+    display: block
+    padding-top: 16px
+    margin-bottom: 16px
+
+  &__lang
+    margin-bottom: 40px
+
+  &__lang .radio
+    width: 50%
+
+  .input
+    width: 100%
+    margin-bottom: 16px
+
+    font-size: 16px
+    color: $black
+    border: 1px solid #DBDBDB
+
+    &::placeholder
+      color: rgba($black, 0.6)
+
+  .checkbox
+    @media (min-width: 1001px)
+      max-width: 240px
+
+    @media (max-width: 1000px) and (max-height: 720px)
+      margin-bottom: 40px
+
+    &::before
+      background: $acc
+
+    .i-checkbox
+      fill: #fff
+
+  &__submit-row
+    flex-grow: 1
+
+    @media (max-width: 1000px) and (max-height: 720px)
+      flex-grow: unset
+
+    @media (max-width: 1000px)
+      flex-direction: column
+      align-items: flex-start
+
+    .btn
+      @media (max-width: 1000px)
+        width: 100%

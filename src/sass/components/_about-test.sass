@@ -1,0 +1,59 @@
+.about-test
+  @media (max-width: 1000px)
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    flex-grow: 1
+
+  h2
+    line-height: 1
+    margin-bottom: 0.85em
+
+    & + p
+      line-height: 1.6
+      margin-bottom: 1.905em
+      @media (max-width: 360px)
+        font-size: 14px
+
+  p
+    color: $black-l
+
+  &__list
+    display: flex
+    margin-bottom: 2.675em
+    margin-left: -56px
+
+    @media (max-width: 500px)
+      display: none
+
+    li
+      margin-left: 56px
+
+    b
+      +norms(m)
+      color: $acc
+      font-size: 48px
+      line-height: 1
+      letter-spacing: -0.02em
+      margin-bottom: 16px
+
+    p
+      font-size: 15px
+      line-height: 1.3
+
+  .btn
+    @media (max-width: 1000px)
+      width: 100%
+      height: 48px
+      line-height: 48px
+
+  .btn:not(:last-child)
+    font-size: 11px
+    +norms(m)
+    @media (max-width: 1000px)
+      margin-bottom: 16px
+      margin-top: auto
+
+  .btn:last-child
+    @media (min-width: 1001px)
+      display: none

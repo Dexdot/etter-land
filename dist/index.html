@@ -46,16 +46,6 @@
   </head>
   <body></body>
 </html>
- <header class="header js-observe fade">
-  <div class="container u-flex u-aic u-jcsb">
-    <a href="#" class="header__logo">
-      <svg class="i-logo"><use xlink:href="#i-logo" /></svg>
-      <span>Etter</span>
-    </a>
-
-    <button class="btn">Регистрация</button>
-  </div>
-</header>
 
 
 <!-- Sprite -->
@@ -63,6 +53,18 @@
 <div style="display: none"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="i-arrow"><path d="M16.53 6.53a.75.75 0 000-1.06L11.757.697a.75.75 0 00-1.06 1.06L14.939 6l-4.242 4.243a.75.75 0 001.06 1.06L16.53 6.53zM0 6.75h16v-1.5H0v1.5z"/></symbol><symbol id="i-checkbox"><path d="M1.522 5.308A.75.75 0 00.478 6.385l1.044-1.077zM5.286 10l-.522.539.572.555.52-.606-.57-.488zm8.283-8.512a.75.75 0 10-1.138-.976l1.138.976zM.478 6.385l4.286 4.154L5.808 9.46 1.522 5.308.478 6.385zm5.377 4.103l7.714-9-1.138-.976-7.715 9 1.14.976z"/></symbol><symbol id="i-logo" viewBox="0 0 44 44"><circle class="logo-c" cx="21.876" cy="22.31" r="21.876"/><circle class="logo-c-sm" r="10.083" transform="matrix(-1 0 0 1 31.67 22.31)"/></symbol></svg></div>
 <!-- ./SVG Sprite -->
 
+ <header class="header js-observe fade">
+  <div class="container u-flex u-aic u-jcsb">
+    <a href="/index.html" class="header__logo">
+      <svg class="i-logo"><use xlink:href="#i-logo" /></svg>
+      <span>Etter</span>
+    </a>
+
+    <a href="/auth.html" class="btn btn--acc-l">
+      Регистрация
+    </a>
+  </div>
+</header>
 
 
 <div class="bg"></div>
@@ -76,7 +78,9 @@
         Работайте где и когда вам удобно, управляйте сами уровнем своих доходов.
         Для этого достаточно знания английского или китайского языка
       </p>
-      <button class="btn">Присоединиться к Etter</button>
+      <a href="/auth.html" class="btn btn--acc">
+        Присоединиться к Etter
+      </a>
     </div>
 
     <div class="section__img">
@@ -129,7 +133,9 @@
         <li>Неограниченное число заказов в день</li>
         <li>Моментальный вывод денег из системы</li>
       </ul>
-      <button class="btn">Присоединиться к Etter</button>
+      <a href="/auth.html" class="btn btn--acc">
+        Присоединиться к Etter
+      </a>
     </div>
 
     <img src="img/mockup.jpg" class="section__bg js-observe fade" />
@@ -164,7 +170,7 @@
           </div>
 
           <div class="how-block__text">
-            <h3 class="t-h3">Заказчик отправляет текст на перевод</h3>
+            <h3 class="t-h4">Заказчик отправляет текст на перевод</h3>
             <ul class="ul">
               <li>Он может выбрать только Английский или Китайский языки</li>
               <li>Сервис автоматически определяет цену перевода</li>
@@ -212,7 +218,7 @@
           </div>
 
           <div class="how-block__text">
-            <h3 class="t-h3">Перевод текста</h3>
+            <h3 class="t-h4">Перевод текста</h3>
             <ul class="ul">
               <li>
                 Тексты для переводов агрегируются в системе и доступы для всех
@@ -242,7 +248,7 @@
           </div>
 
           <div class="how-block__text">
-            <h3 class="t-h3">Этап проверки</h3>
+            <h3 class="t-h4">Этап проверки</h3>
             <ul class="ul">
               <li>
                 После выполнения перевода, текст переходит на проверку, после ее
@@ -270,8 +276,12 @@
         <li>Получите ключи доступа в систему</li>
       </ol>
       <div class="cta__btns u-flex u-aic">
-        <button class="btn">Регистрация</button>
-        <button class="btn">Пример теста</button>
+        <a href="/auth.html" class="btn btn--acc">
+          Регистрация
+        </a>
+        <a href="/example.html" class="btn btn--stroke-grey">
+          Пример теста
+        </a>
       </div>
     </div>
   </section>
@@ -295,14 +305,14 @@
             <textarea class="input" placeholder="Ваш вопрос"></textarea>
             <div class="u-flex u-aic u-jcsb">
               <label class="checkbox">
-                <input type="checkbox" />
+                <input type="checkbox" checked />
                 <svg class="i-checkbox">
                   <use xlink:href="#i-checkbox" />
                 </svg>
                 Я согласен на <a href="#">обработку персональных данных</a>
               </label>
 
-              <button class="btn" type="submit">Отправить</button>
+              <button class="btn btn--white" type="submit">Отправить</button>
             </div>
           </div>
         </form>
@@ -313,7 +323,9 @@
 
   <!-- Join Start -->
   <section class="section join container t-tac" data-bg="#FFFFFF">
-    <button class="join-btn">Присоединиться к Etter</button>
+    <a href="/auth.html" class="join-btn">
+      Присоединиться к Etter
+    </a>
   </section>
   <!-- Join End -->
 </main>
