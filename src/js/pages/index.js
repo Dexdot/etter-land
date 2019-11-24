@@ -5,4 +5,6 @@ import "@/observer/animate";
 import "@/observer/bg";
 import "@/init/rail";
 import "@/init/gotoform";
+import "@/init/autosize";
+import "@/init/test";
 // import '@/init/scroll';

@@ -33,12 +33,27 @@
     <div class="auth__half">
       <form class="auth-form">
         <h2 class="t-h4">Зарегистрируйтесь для прохождения</h2>
-        <input class="input" type="text" placeholder="Имя" required />
-        <input class="input" type="text" placeholder="Фамилия" required />
+        <input
+          class="input"
+          type="text"
+          placeholder="Имя"
+          name="auth-name"
+          required
+          minlength="2"
+        />
+        <input
+          class="input"
+          type="text"
+          placeholder="Фамилия"
+          name="auth-surname"
+          required
+          minlength="1"
+        />
         <input
           class="input"
           type="text"
           placeholder="Почта"
+          name="auth-email"
           required
           pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
         />
@@ -47,12 +62,12 @@
 
         <div class="auth-form__lang u-center">
           <label class="radio">
-            <input type="radio" name="lang" value="Английский" checked />
+            <input type="radio" name="auth-lang" value="Английский" checked />
             <span class="radio__border"></span>
             <span>Английский</span>
           </label>
           <label class="radio">
-            <input type="radio" name="lang" value="Китайский" />
+            <input type="radio" name="auth-lang" value="Китайский" />
             <span class="radio__border"></span>
             <span>Китайский</span>
           </label>
@@ -60,14 +75,15 @@
 
         <div class="auth-form__submit-row u-flex u-aic u-jcsb">
           <label class="checkbox">
-            <input type="checkbox" checked />
+            <input type="checkbox" name="auth-agree" checked />
             <svg class="i-checkbox">
               <use xlink:href="#i-checkbox" />
             </svg>
             Я согласен на <a href="#">обработку персональных данных</a>
           </label>
 
-          <button class="btn btn--acc" type="submit">Отправить</button>
+          <a href="/test.html" class="btn btn--acc">Отправить</a>
+          <!-- <button class="btn btn--acc" type="submit">Отправить</button> -->
         </div>
       </form>
     </div>

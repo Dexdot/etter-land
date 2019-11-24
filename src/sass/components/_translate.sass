@@ -1,0 +1,22 @@
+$translate-pt: calc(116px + 8.8vh)
+  
+.translate
+  display: flex
+  align-items: flex-start
+  padding-top: $translate-pt
+
+  position: relative
+
+  &::before
+    content: ''
+    position: absolute
+    top: $translate-pt
+    left: 50%
+    transform: translate(-50%, 0)
+    width: 1px
+    height: 100%
+    background: #E9E9E9
+
+.translate__half
+  width: 50%
+  padding: 0 6.6vw 0 2.5vw

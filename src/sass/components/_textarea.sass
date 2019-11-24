@@ -1,0 +1,19 @@
+.textarea
+  resize: none
+  width: 100%
+  color: #333
+
+  &::placeholder
+    color: rgba($black, 0.2)
+
+  &:first-of-type
+    letter-spacing: -0.01em
+    line-height: 1
+    +heading-size-4
+    +norms(b)
+
+  &:not(:first-of-type)
+    +merri
+    font-size: 18px
+    line-height: 2.3
+    

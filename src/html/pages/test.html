@@ -1,0 +1,174 @@
+@include('../includes/pre-head.html') @include('../includes/header-test.html')
+
+<main>
+  <form class="test">
+    <section class="test-item">
+      <div class="question">
+        <div class="question__half">
+          <div class="container">
+            <p class="t-h3">
+              Who<span class="divider"></span>?<span class="divider"></span>to
+              get through to John.
+            </p>
+          </div>
+        </div>
+
+        <div class="question__half">
+          <ul class="question__answers">
+            <li class="t-h5">
+              <input
+                type="radio"
+                name="question-1"
+                value="do you phone… I’m trying"
+              />
+              <p>do you phone… I’m trying</p>
+            </li>
+            <li class="t-h5">
+              <input
+                type="radio"
+                name="question-1"
+                value="are you phoning … I’m trying"
+              />
+              <p>are you phoning … I’m trying</p>
+            </li>
+            <li class="t-h5">
+              <input
+                type="radio"
+                name="question-1"
+                value="are you phoning … I try"
+              />
+              <p>are you phoning … I try</p>
+            </li>
+            <li class="t-h5">
+              <input
+                type="radio"
+                name="question-1"
+                value="do you phone… I try"
+              />
+              <p>do you phone… I try</p>
+            </li>
+          </ul>
+          <button class="btn btn--stroke js-next" type="button">Далее</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="test-item">
+      <div class="question">
+        <div class="question__half">
+          <div class="container">
+            <p class="t-h3">
+              Они спрашивали как ты? А я им: <span class="divider"></span>
+            </p>
+          </div>
+        </div>
+
+        <div class="question__half">
+          <ul class="question__answers">
+            <li class="t-h5">
+              <input
+                type="radio"
+                name="question-2"
+                value="Честно говоря — неплохо"
+              />
+              <p>Честно говоря — неплохо</p>
+            </li>
+            <li class="t-h5">
+              <input
+                type="radio"
+                name="question-2"
+                value="(Честно говоря) — нормально"
+              />
+              <p>(Честно говоря) — нормально</p>
+            </li>
+            <li class="t-h5">
+              <input type="radio" name="question-2" value="Нормально..." />
+              <p>Нормально...</p>
+            </li>
+            <li class="t-h5">
+              <input
+                type="radio"
+                name="question-2"
+                value="(Откровенно говоря) — клёёво (это клёво)"
+              />
+              <p>(Откровенно говоря) — клёёво (это клёво)</p>
+            </li>
+          </ul>
+          <button class="btn btn--stroke js-next" type="button">Далее</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="test-item">
+      <div class="container">
+        <div class="translate">
+          <div class="translate__half">
+            <textarea class="textarea" placeholder="Заголовок" disabled>
+  Уважаемый Джон Браун</textarea
+            >
+            <textarea class="textarea" placeholder="Текст перевода" disabled>
+Мы недавно завершили один проект с Джимом Моррисом, и я был очень впечатлен его работой. Джим Моррис - весьма талантливый графический дизайнер, работающий по фрилансу. Он помог нам создать образ для нашего нового логотипа, который превзошел все мои ожидания. Он - одаренный специалист, профессионал, работающий по вполне приемлемым ценам.
+  
+Если вам когда-нибудь потребуется дизайнер-фрилансер, настоятельно рекомендую воспользоваться услугами Джима Морриса. Его телефонный номер: +79562134678, на случай, если вы захотите с ним связаться
+            </textarea>
+          </div>
+
+          <div class="translate__half">
+            <textarea
+              class="textarea"
+              placeholder="Заголовок"
+              name="trs-header-1"
+            ></textarea>
+            <textarea
+              class="textarea"
+              placeholder="Текст перевода"
+              name="trs-text-1"
+            ></textarea>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="test-item">
+      <button class="u-hidden" id="submit-test" type="submit"></button>
+
+      <div class="container">
+        <div class="translate">
+          <div class="translate__half">
+            <textarea class="textarea" placeholder="Заголовок" disabled>
+  Dear Mr Brown,</textarea
+            >
+            <textarea class="textarea" placeholder="Текст перевода" disabled>
+  I am writing in reference to the current situation with the Etter Airport Project. We have a number of questions which we hope you could answer.
+  First of all, could you please provide us with an update on where you are on the Etter Airport Project. We would also appreciate it if you could clarify what the current issues with the delivery system are, and confirm when you expect them to be resolved.
+  
+  In addition, at the end of our last meeting we requested a copy of the latest project update report. Unfortunately, we have still not received it. We would appreciate it if you could forward this to us. 
+  I would really appreciate it if you could deal with these matters urgently.
+  I look forward to hearing from you.
+  
+  Yours sincerely,
+  Alex McDonald
+  Development Manager
+            </textarea>
+          </div>
+
+          <div class="translate__half">
+            <textarea
+              class="textarea"
+              placeholder="Заголовок"
+              name="trs-header-2"
+            ></textarea>
+            <textarea
+              class="textarea"
+              placeholder="Текст перевода"
+              name="trs-text-2"
+            ></textarea>
+          </div>
+        </div>
+      </div>
+    </section>
+  </form>
+</main>
+
+<!-- footer -->
+@include('../includes/footer.html')

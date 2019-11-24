@@ -16,3 +16,28 @@
     color: $acc
     +yo('font-size', (320px: 18px, 768px: 24px))
     line-height: 1
+
+.header .timer
+  top: -14px
+  left: 50%
+  align-self: center
+
+  @media (min-width: 901px)
+    position: absolute
+    transform: translate(-50%, 0)
+
+.header__test-buttons
+  @media (max-width: 900px)
+    display: none
+
+  .btn
+    height: 40px
+    padding: 0 32px
+
+    font-size: 16px
+    text-transform: unset
+    letter-spacing: unset
+
+    &:not(:last-child)
+      color: $acc
+      margin-right: 24px

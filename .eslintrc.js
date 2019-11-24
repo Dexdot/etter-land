@@ -6,18 +6,17 @@ module.exports = {
   globals: {
     $: true
   },
-  extends: ['airbnb-base', 'prettier'],
-  parser: 'babel-eslint',
+  extends: ["airbnb-base", "prettier"],
+  parser: "babel-eslint",
   parserOptions: {
     allowImportExportEverywhere: true
   },
   rules: {
-    'linebreak-style': ['error', 'windows'],
-    'import/no-cycle': false
+    "import/no-cycle": false
   },
   settings: {
-    'import/resolver': {
-      alias: [['@', './src/js/']]
+    "import/resolver": {
+      alias: [["@", "./src/js/"]]
     }
   }
 };
