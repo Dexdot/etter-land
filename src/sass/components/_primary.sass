@@ -1,0 +1,66 @@
+.primary
+  @media (max-width: 675px)
+    text-align: center
+
+.primary__banner
+  padding: 96px 40px 48px 40px
+  position: relative
+
+  @media (max-width: 675px)
+    padding: 104px $unit 0 $unit
+    background: 0
+    background-image: none !important
+
+  &::before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: $acc
+    mix-blend-mode: hard-light
+    @media (max-width: 675px)
+      display: none
+
+  p
+    color: #fff
+    font-size: 32px
+    line-height: 1.04
+    position: relative
+    @media (max-width: 675px)
+      color: $black
+
+    b
+      display: block
+      +norms(b)
+
+.primary__content
+  padding: 40px 40px 24px 40px
+
+  @media (max-width: 675px)
+    padding: 32px $unit 56px $unit
+    flex-grow: 1
+    display: flex
+    flex-direction: column
+    align-items: center
+
+  input
+    +norms(b)
+    margin-bottom: 1.325em
+
+    @media (max-width: 675px)
+      margin-left: auto
+      margin-right: auto
+
+  p:not(:last-of-type)
+    margin-bottom: 1.325em
+    @media (min-width: 676px)
+      max-width: 445px
+
+  p:last-of-type
+    margin-top: 80px
+    text-align: center
+    @media (max-width: 675px)
+      margin-top: auto
+  

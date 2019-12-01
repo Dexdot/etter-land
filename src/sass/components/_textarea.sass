@@ -3,6 +3,10 @@
   width: 100%
   color: #333
 
+  &:disabled
+    -webkit-text-fill-color: #333
+    opacity: 1
+
   &::placeholder
     color: rgba($black, 0.2)
 
@@ -16,4 +20,9 @@
     +merri
     font-size: 18px
     line-height: 2.3
-    
+
+    @media (max-width: 900px)
+      font-size: 16px
+      line-height: 2
+
+

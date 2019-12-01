@@ -7,6 +7,10 @@ $translate-pt: calc(116px + 8.8vh)
 
   position: relative
 
+  @media (max-width: 900px)
+    flex-direction: column
+    padding-top: calc(68px + 8.8vh)
+
   &::before
     content: ''
     position: absolute
@@ -17,6 +21,23 @@ $translate-pt: calc(116px + 8.8vh)
     height: 100%
     background: #E9E9E9
 
+    @media (max-width: 900px)
+      display: none
+
 .translate__half
   width: 50%
   padding: 0 6.6vw 0 2.5vw
+
+  @media (max-width: 900px)
+    width: 100%
+    padding: 0
+    padding-bottom: 40px
+
+  &:first-child
+    @media (max-width: 900px)
+      margin-bottom: 40px
+      border-bottom: 1px solid #e9e9e9
+
+.translate + .btn
+  @media (max-width: 900px)
+    margin-bottom: 48px
