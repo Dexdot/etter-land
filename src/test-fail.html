@@ -33,6 +33,8 @@
       html,
       body,
       .document {
+        font-size: 18px;
+        font-family: Arial, sans-serif;
         width: 100% !important;
         height: 100% !important;
         margin: 0;
@@ -117,7 +119,7 @@
             cellpadding="0"
             border="0"
             align="center"
-            width="750"
+            width="600"
             class="container"
           >
             <tr>
@@ -131,8 +133,18 @@
                   align="center"
                   width="100%"
                 >
-                  <tr>
-                    <td></td>
+                  <tr align="center">
+                    <td>
+                      <div style="padding-top: 16px; padding-bottom: 16px">
+                        <img
+                          src="/img/logo.png"
+                          alt=""
+                          border="0"
+                          width="96"
+                          height="34"
+                        />
+                      </div>
+                    </td>
                   </tr>
                 </table>
               </td>
@@ -146,18 +158,63 @@
             cellpadding="0"
             border="0"
             align="center"
-            width="750"
+            width="600"
             class="container"
           >
             <tr>
               <td>
-                <!-- Physical address -->
+                <div
+                  style="
+                    padding: 96px 40px 48px 40px;
+                    background-color: #1D65F5;
+                    background-image: url(/img/banners/3.jpg);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    color: #ffffff;
+                    font-size: 32px;
+                  "
+                >
+                  <b>Увы!</b><br />Вы не прошли тестирование
+                </div>
               </td>
             </tr>
             <tr>
               <td>
-                <!-- Unsubscribe link -->
-                <unsubscribe></unsubscribe>
+                <div
+                  style="
+                    padding: 40px 40px 24px 40px;
+                    color: #333333;
+                  "
+                >
+                  <div style="display: block;">
+                    <a
+                      href="#"
+                      style="
+                        font-size: 16px;
+                        line-height: 48px;
+                        white-space: nowrap;
+                        color: #ffffff;
+                        text-decoration: none;
+    
+                        display: inline-block;
+                        padding: 0 40px;
+                        height: 48px;
+                        margin-bottom: 80px;
+    
+                        border-radius: 100px;
+                        background: #1D65F5;
+                      "
+                      ><b>Попробовать еще раз</b></a
+                    >
+                    <p
+                      style="font-size: 14px; color: #828282; text-align: center;"
+                    >
+                      If you did not request a password reset, no further action
+                      is required.
+                    </p>
+                  </div>
+                </div>
               </td>
             </tr>
           </table>
