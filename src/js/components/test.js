@@ -1,5 +1,5 @@
-import autosize from "autosize";
-import Slider from "@/components/slider";
+import autosize from 'autosize';
+import Slider from '@/components/slider';
 
 const LIMIT = {
   minutes: 20, // 20 minutes
@@ -8,15 +8,15 @@ const LIMIT = {
 };
 
 const updateAutosize = () => {
-  $.each(".textarea", el => autosize.update(el));
+  $.each('.textarea', el => autosize.update(el));
 };
 
 export default class Test {
   constructor(el) {
     this.form = el;
-    this.submitButton = $.qs("#submit-test");
-    this.textNode = $.qs(".timer__text");
-    this.circlePath = $.qs(".timer path");
+    this.submitButton = $.qs('#submit-test');
+    this.textNode = $.qs('.timer__text');
+    this.circlePath = $.qs('.timer path');
 
     this.slider = new Slider(this.form);
     this.timerID = 0;
@@ -43,13 +43,30 @@ export default class Test {
     this.startTimer();
 
     // Next slider
-    $.delegate(".js-next", () => {
-      this.slider.next();
-      updateAutosize();
+    $.delegate('.js-next', () => {
+      const question = $.qs('.question', this.slider.DOM.active);
+      const translate = $.qs('.translate', this.slider.DOM.active);
+
+      // Valid
+      let valid;
+
+      if (question) {
+        valid = !!$.qs('input:checked', question);
+      }
+      if (translate) {
+        valid = $.qsa('textarea:not(:disabled)', translate).every(
+          textarea => textarea.validity.valid
+        );
+      }
+
+      if (valid) {
+        this.slider.next();
+        updateAutosize();
+      }
     });
 
     // On form submit
-    this.form.addEventListener("submit", e => {
+    this.form.addEventListener('submit', e => {
       e.preventDefault();
 
       const formData = new FormData(this.form);
@@ -71,8 +88,8 @@ export default class Test {
     this.minutes = parseInt(this.seconds / 60, 10);
 
     const seconds = parseInt(this.seconds % 60, 10);
-    const minutesPrefix = this.minutes < 10 ? "0" : "";
-    const secondsPrefix = seconds < 10 ? "0" : "";
+    const minutesPrefix = this.minutes < 10 ? '0' : '';
+    const secondsPrefix = seconds < 10 ? '0' : '';
     const resultStr = `${minutesPrefix}${this.minutes}:${secondsPrefix}${seconds}`;
 
     // Timer text
@@ -80,7 +97,7 @@ export default class Test {
 
     // Svg progress
     this.circlePath.setAttribute(
-      "stroke-dasharray",
+      'stroke-dasharray',
       `${100 - this.seconds / LIMIT.percent} 100`
     );
 

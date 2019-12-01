@@ -12,3 +12,39 @@
   letter-spacing: unset
   @media (min-width: 901px)
     display: none
+
+
+.test-complete
+  background: #FBF0E6
+
+  position: relative
+
+  text-align: center
+
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-direction: column
+  min-height: calc((var(--vh)) * 100)
+  padding: 0 calc(#{$unit} + 8px) 64px calc(#{$unit} + 8px)
+
+  h2
+    font-size: 32px
+    margin-bottom: 0.4em
+
+  p
+    font-size: 18px
+
+  .btn
+    position: absolute
+    bottom: 56px
+    left: 50%
+    transform: translate(-50%, 0)
+
+    height: 40px
+    padding: 0 48px
+
+    color: $acc
+    font-size: 16px
+    text-transform: unset
+    letter-spacing: unset

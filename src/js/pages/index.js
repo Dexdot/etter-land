@@ -7,4 +7,4 @@ import '@/init/rail';
 import '@/init/gotoform';
 import '@/init/autosize';
 import '@/init/test';
-import '@/init/modal';
+// import '@/init/modal';

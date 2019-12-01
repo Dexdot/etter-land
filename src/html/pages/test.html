@@ -1,8 +1,4 @@
 @include('../includes/pre-head.html') @include('../includes/header-test.html')
-@include('../includes/test-success.html')
-@include('../includes/test-half-success.html')
-@include('../includes/auth-thanks.html') @include('../includes/test-fail.html')
-@include('../includes/test-continue.html')
 
 <main>
   <form class="test">
@@ -122,11 +118,15 @@
               class="textarea"
               placeholder="Заголовок"
               name="trs-header-1"
+              required
+              minlength="10"
             ></textarea>
             <textarea
               class="textarea"
               placeholder="Текст перевода"
               name="trs-text-1"
+              required
+              minlength="10"
             ></textarea>
           </div>
         </div>
@@ -162,14 +162,26 @@
               class="textarea"
               placeholder="Заголовок"
               name="trs-header-2"
+              required
+              minlength="10"
             ></textarea>
             <textarea
               class="textarea"
               placeholder="Текст перевода"
               name="trs-text-2"
+              required
+              minlength="10"
             ></textarea>
           </div>
         </div>
+        <button class="btn btn--stroke js-next" type="button">Далее</button>
+      </div>
+    </section>
+
+    <section class="test-item">
+      <div class="test-complete container">
+        <h2>Поздравляем!</h2>
+        <p></p>
         <button class="btn btn--stroke js-next" type="button">Далее</button>
       </div>
     </section>
