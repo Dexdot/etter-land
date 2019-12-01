@@ -21,16 +21,15 @@ export default class Test {
     this.slider = new Slider(this.form);
     this.timerID = 0;
 
-    const { hash } = window.location;
-    this.startTimestamp = hash ? window.parseInt(hash.slice(1)) : 1574555393232;
+    this.finalTime = parseInt($.qs('[data-value]').dataset.value, 10);
     this.currentTimestamp = Date.now();
-    this.secondsFromStart =
-      (this.currentTimestamp - this.startTimestamp) / 1000;
-    this.minutesFromStart = parseInt(this.secondsFromStart / 60, 10);
 
-    if (this.minutesFromStart < LIMIT.minutes) {
-      this.minutes = LIMIT.minutes - this.minutesFromStart;
-      this.seconds = parseInt(LIMIT.seconds - this.secondsFromStart, 10);
+    this.deltaSec = (this.finalTime - this.currentTimestamp) / 1000;
+    this.deltaMin = parseInt(this.deltaSec / 60, 10);
+
+    if (this.deltaSec < LIMIT.seconds && this.deltaSec > 0) {
+      this.minutes = this.deltaMin;
+      this.seconds = this.deltaSec;
     } else {
       this.minutes = LIMIT.minutes;
       this.seconds = this.minutes * 60;
@@ -101,7 +100,7 @@ export default class Test {
       `${100 - this.seconds / LIMIT.percent} 100`
     );
 
-    if (this.seconds === 0) {
+    if (parseInt(this.seconds, 10) === 0) {
       window.clearTimeout(this.timerID);
       this.submit();
     } else {
