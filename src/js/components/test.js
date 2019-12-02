@@ -30,17 +30,17 @@ export default class Test {
     if (this.deltaSec < LIMIT.seconds && this.deltaSec > 0) {
       this.minutes = this.deltaMin;
       this.seconds = this.deltaSec;
-      this.setup();
+      this.startTimer();
     } else {
       this.textNode.textContent = '00:00';
       this.circlePath.setAttribute('stroke-dasharray', '100 100');
       this.circlePath.classList.add('red');
     }
+
+    this.setup();
   }
 
   setup() {
-    this.startTimer();
-
     // Next slider
     $.delegate('.js-next', () => {
       const question = $.qs('.question', this.slider.DOM.active);
