@@ -10,7 +10,7 @@
 export default class Slider {
   constructor(el) {
     this.DOM = { el };
-    this.DOM.slides = Array.from(this.DOM.el.children);
+    this.DOM.slides = $.qsa('.test-item', this.DOM.el);
     [this.DOM.active] = this.DOM.slides;
 
     this.showSlide();
@@ -38,14 +38,14 @@ export default class Slider {
     this.hideSlides();
 
     switch (action) {
-      case "prev":
+      case 'prev':
         if (this.index <= 0) {
           this.index = this.DOM.slides.length - 1;
         } else {
           this.index = this.index - 1;
         }
         break;
-      case "next":
+      case 'next':
         if (this.index === this.DOM.slides.length - 1) {
           this.index = 0;
         } else {
@@ -68,20 +68,20 @@ export default class Slider {
   }
 
   prev() {
-    this.update("prev");
+    this.update('prev');
   }
 
   next() {
-    this.update("next");
+    this.update('next');
   }
 
   hideSlides() {
     this.DOM.slides.forEach(slide => {
-      slide.classList.remove("active");
+      slide.classList.remove('active');
     });
   }
 
   showSlide() {
-    this.DOM.active.classList.add("active");
+    this.DOM.active.classList.add('active');
   }
 }

@@ -65,17 +65,17 @@ export default class Test {
     });
 
     // On form submit
-    this.form.addEventListener('submit', e => {
-      e.preventDefault();
+    // this.form.addEventListener('submit', e => {
+    //   e.preventDefault();
 
-      const formData = new FormData(this.form);
+    //   const formData = new FormData(this.form);
 
-      for (const [key, value] of formData.entries()) {
-        console.log(`${key}: ${value}`);
-      }
+    //   for (const [key, value] of formData.entries()) {
+    //     console.log(`${key}: ${value}`);
+    //   }
 
-      return false;
-    });
+    //   return false;
+    // });
   }
 
   submit() {
@@ -102,7 +102,8 @@ export default class Test {
 
     if (parseInt(this.seconds, 10) === 0) {
       window.clearTimeout(this.timerID);
-      this.submit();
+      this.circlePath.classList.add('red');
+      // this.submit();
     } else {
       this.timerID = setTimeout(this.startTimer.bind(this), 1000);
     }
