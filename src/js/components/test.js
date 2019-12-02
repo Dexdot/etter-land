@@ -58,19 +58,21 @@ export default class Test {
         );
       }
 
+      if (!valid) return false;
+
       if (this.slider.index === this.slider.DOM.slides.length - 1) {
         this.form.submit();
-      } else if (valid) {
-          this.slider.next();
-          updateAutosize();
+      } else {
+        this.slider.next();
+        updateAutosize();
 
-          if (this.slider.index === this.slider.DOM.slides.length - 1) {
-            const text = $.qs('[data-last-text]').dataset.lastText;
-            $.each('.js-next', btn => {
-              btn.textContent = text;
-            });
-          }
+        if (this.slider.index === this.slider.DOM.slides.length - 1) {
+          const text = $.qs('[data-last-text]').dataset.lastText;
+          $.each('.js-next', btn => {
+            btn.textContent = text;
+          });
         }
+      }
     });
   }
 
