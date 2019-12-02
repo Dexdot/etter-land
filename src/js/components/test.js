@@ -30,12 +30,14 @@ export default class Test {
     if (this.deltaSec < LIMIT.seconds && this.deltaSec > 0) {
       this.minutes = this.deltaMin;
       this.seconds = this.deltaSec;
+      this.setup();
     } else {
-      this.minutes = LIMIT.minutes;
-      this.seconds = this.minutes * 60;
+      this.textNode.textContent = '00:00';
+      this.circlePath.setAttribute('stroke-dasharray', '100 100');
+      this.circlePath.classList.add('red');
+      // this.minutes = LIMIT.minutes;
+      // this.seconds = this.minutes * 60;
     }
-
-    this.setup();
   }
 
   setup() {
