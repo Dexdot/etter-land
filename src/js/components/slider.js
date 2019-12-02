@@ -46,9 +46,12 @@ export default class Slider {
         }
         break;
       case 'next':
-        if (this.index === this.DOM.slides.length - 1) {
-          this.index = 0;
-        } else {
+        // if (this.index === this.DOM.slides.length - 1) {
+        //   this.index = 0;
+        // } else {
+        //   this.index = this.index + 1;
+        // }
+        if (this.index !== this.DOM.slides.length - 1) {
           this.index = this.index + 1;
         }
         break;

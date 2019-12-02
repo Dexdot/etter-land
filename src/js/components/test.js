@@ -35,6 +35,7 @@ export default class Test {
       this.textNode.textContent = '00:00';
       this.circlePath.setAttribute('stroke-dasharray', '100 100');
       this.circlePath.classList.add('red');
+      this.setup();
       // this.minutes = LIMIT.minutes;
       // this.seconds = this.minutes * 60;
     }
@@ -60,28 +61,22 @@ export default class Test {
         );
       }
 
-      if (valid) {
+      if (!valid) {
+        if (this.slider.index === this.slider.DOM.slides.length - 1) {
+          this.form.submit();
+        }
+      } else {
         this.slider.next();
         updateAutosize();
+
+        if (this.slider.index === this.slider.DOM.slides.length - 1) {
+          const text = $.qs('[data-last-text]').dataset.lastText;
+          $.each('.js-next', btn => {
+            btn.textContent = text;
+          });
+        }
       }
     });
-
-    // On form submit
-    // this.form.addEventListener('submit', e => {
-    //   e.preventDefault();
-
-    //   const formData = new FormData(this.form);
-
-    //   for (const [key, value] of formData.entries()) {
-    //     console.log(`${key}: ${value}`);
-    //   }
-
-    //   return false;
-    // });
-  }
-
-  submit() {
-    this.submitButton.click();
   }
 
   startTimer() {
@@ -105,7 +100,6 @@ export default class Test {
     if (parseInt(this.seconds, 10) === 0) {
       window.clearTimeout(this.timerID);
       this.circlePath.classList.add('red');
-      // this.submit();
     } else {
       this.timerID = setTimeout(this.startTimer.bind(this), 1000);
     }
