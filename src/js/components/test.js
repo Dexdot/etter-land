@@ -35,9 +35,6 @@ export default class Test {
       this.textNode.textContent = '00:00';
       this.circlePath.setAttribute('stroke-dasharray', '100 100');
       this.circlePath.classList.add('red');
-      this.setup();
-      // this.minutes = LIMIT.minutes;
-      // this.seconds = this.minutes * 60;
     }
   }
 
