@@ -21,7 +21,7 @@ export default class Test {
     this.slider = new Slider(this.form);
     this.timerID = 0;
 
-    this.finalTime = parseInt($.qs('[data-value]').dataset.value, 10);
+    this.finalTime = parseInt($.qs('[data-value]').dataset.value, 10) * 1000;
     this.currentTimestamp = Date.now();
 
     this.deltaSec = (this.finalTime - this.currentTimestamp) / 1000;
